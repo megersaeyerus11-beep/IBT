@@ -1,0 +1,7 @@
+eyerus=1000
+hermon=2000
+ermi=3000
+haymi=400
+eyerus=10
+eyerus=120
+hermon=40

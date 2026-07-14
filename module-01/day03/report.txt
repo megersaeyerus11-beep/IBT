@@ -1,0 +1,12 @@
+Customer Report 
+
+
+eyerus:1130.0
+
+hermon:2040.0
+
+ermi:3000.0
+
+haymi:400.0
+
+customer length = 5
