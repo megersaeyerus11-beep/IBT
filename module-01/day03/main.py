@@ -1,5 +1,5 @@
 
-# transaction loge reader
+# transaction loge reader/ in class exersis
 try:
  with open("transaction.txt","r") as file:
     transaction_dic = {}
@@ -35,4 +35,6 @@ with open("report.txt", "w") as file:
       file.write(f"customer length = {len(name)}")
 
 
+print (sort_transaction)
 
+        

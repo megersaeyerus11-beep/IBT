@@ -1,0 +1,4 @@
+Paracetamol : 50 units
+Amoxicillin : 30 units
+Ibuprofen : 40 units
+Vitamin C : 100 units
