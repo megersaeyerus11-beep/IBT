@@ -20,7 +20,6 @@ class Account:
     def statement(self):
         print(f"Regular | {self.owner} | {self.balance} ETB")
 
-
 class SavingsAccount(Account):
     def __init__(self, owner, acc_no, balance, rate):
         super().__init__(owner, acc_no, balance)
@@ -48,7 +47,7 @@ class CurrentAccount(Account):
         print(f"Current | {self.owner} | {self.balance} ETB")
 
 
-# Accounts
+
 accounts = [
     Account("Eyerus", "A1", 5000),
     SavingsAccount("Hermon", "S1", 4000, 0.05),
@@ -58,6 +57,5 @@ accounts = [
 accounts[1].add_interest()
 accounts[2].withdraw(3500)
 
-# Polymorphism
 for acc in accounts:
     acc.statement()

@@ -76,9 +76,6 @@ product1.restock(5)
 product1.sell(3)
 
 
-
-
-
 #Q4
 class Product:
     def __init__(self, name, price, quantity):

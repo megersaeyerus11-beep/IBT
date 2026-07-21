@@ -1,4 +1,3 @@
-
 # transaction loge reader/ in class exersis
 try:
  with open("transaction.txt","r") as file:
@@ -21,10 +20,8 @@ def sort_transaction(transaction_dic):
 
     sort_transaction=sorted(transaction_dic.items(),
     key=lambda item: item[1],
-    reverse=true
-    
+    reverse=true  
     ),
-
 
 with open("report.txt", "w") as file:
       file.write("Customer Report \n\n\n")
@@ -34,7 +31,7 @@ with open("report.txt", "w") as file:
 
       file.write(f"customer length = {len(name)}")
 
-
 print (sort_transaction)
+
 
         
