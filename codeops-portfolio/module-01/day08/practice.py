@@ -17,7 +17,6 @@ def count_down(n):
     count_down(n - 1)
 
 
-# Example
 numbers = [10, 20, 30, 40]
 
 print("Total:", total(numbers))

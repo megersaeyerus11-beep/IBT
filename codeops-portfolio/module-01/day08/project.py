@@ -4,16 +4,18 @@ class Account:
         self.acc_no = acc_no
         self.balance = balance
         self.history = []
+
     def deposit(self, amount):
         self.balance += amount
         self.history.append(("deposit", amount))
+
     def withdraw(self, amount):
         self.balance -= amount
         self.history.append(("withdraw", amount))
+
     def undo_last(self):
         if self.history:
             action, amount = self.history.pop()
-
             if action == "deposit":
                 self.balance -= amount
             else:
@@ -22,24 +24,29 @@ class Account:
     def statement(self):
         print(self.owner, self.acc_no, self.balance)
 
+
 class AccountRegistry:
     def __init__(self):
         self.accounts = {}
+
     def add(self, account):
         self.accounts[account.acc_no] = account
+
     def find(self, acc_no):
         return self.accounts.get(acc_no)
+
     def list_all(self):
         return list(self.accounts.values())
-    def top_by_balance(self, n):
+
+    def leaderboard(self):      # Balance Leaderboard
+
         return sorted(
             self.accounts.values(),
             key=lambda account: account.balance,
             reverse=True
-        )[:n]
+        )
 
-
-    def find_by_number(self, acc_no):
+    def binary_search(self, acc_no):       # Binary Search by Account Number
         accounts = sorted(
             self.accounts.values(),
             key=lambda account: account.acc_no
@@ -48,60 +55,51 @@ class AccountRegistry:
         left = 0
         right = len(accounts) - 1
 
-
         while left <= right:
             mid = (left + right) // 2
+
             if accounts[mid].acc_no == acc_no:
                 return accounts[mid]
             elif accounts[mid].acc_no < acc_no:
                 left = mid + 1
             else:
                 right = mid - 1
+
         return None
 
 
-def total_transactions(history):
+def transaction_total(history):       # Recursive Transaction Total
+
     if len(history) == 0:
         return 0
 
-    return history[0][1] + total_transactions(history[1:])
+    return history[0][1] + transaction_total(history[1:])
+
 
 
 registry = AccountRegistry()
 
 a1 = Account("Eyerus", "A1", 5000)
 a2 = Account("Hermon", "S1", 4000)
-a3 = Account("Ermi", "B1", 8000)
-a4 = Account("Haymi", "C1", 6000)
+a3 = Account("Ermi", "B1", 7000)
 
 registry.add(a1)
 registry.add(a2)
 registry.add(a3)
-registry.add(a4)
 
+a1.deposit(1000)
+a1.withdraw(500)
 
-a1.deposit(500)
-a1.withdraw(200)
+print("Leaderboard")
+for account in registry.leaderboard():
+    print(account.owner, account.balance)
 
-a3.deposit(1000)
+print()
 
-
-print("Top Accounts:")
-
-for acc in registry.top_by_balance(3):
-    acc.statement()
-
-
-print("\nSearch Account:")
-
-result = registry.find_by_number("B1")
-
+result = registry.binary_search("B1")
 if result:
-    result.statement()
-else:
-    print("Account not found")
+    print("Found:", result.owner, result.balance)
 
+print()
 
-print("\nTransaction Total:")
-
-print(total_transactions(a1.history))
+print("Transaction Total:", transaction_total(a1.history))
