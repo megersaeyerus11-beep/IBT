@@ -1,0 +1,56 @@
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+    line-height: 2.5;
+}
+
+
+.card {
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-top: 6px solid #d4af37; 
+    background-color: #fff;
+    border-radius: 0.5rem;
+}
+
+:root {
+    --card-border-color: #ddd;
+    --card-accent-color: #d4af37;
+    --card-bg-color: #fff;
+}
+
+
+.card {
+    padding: 1.5rem;
+    border: 1px solid var(--card-border-color);
+    border-top: 6px solid var(--card-accent-color);
+    background-color: var(--card-bg-color);
+    border-radius: 0.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.price::before {
+    content: "ETB ";
+}
+
+.ingredient-list li:nth-child(even) {
+    background-color: var(--stripe-color);
+}

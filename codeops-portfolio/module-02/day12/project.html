@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habesha Eatery | Reservation</title>
+    <meta name="description" content="Reserve a table at Habesha Eatery, an Addis Ababa restaurant 
+    serving traditional Ethiopian cuisine.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <nav aria-label="Main navigation">
+    <ul>
+        <li><a href="index.html">Reservation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    </nav>
+<h1>Habesha Eatery Reservation</h1>
+</header>
+<main>
+<section aria-labelledby="reservation-title">
+    <h2 id="reservation-title">Book a Table</h2>
+    <form action="#" method="post">
+        <label for="name">Full Name:</label>
+        <input id="name" name="name" type="text" required>
+        <label for="email">Email Address:</label>
+        <input id="email" name="email" type="email" required>
+        <label for="date">Reservation Date:</label>
+        <input id="date" name="date" type="date" required>
+        <label for="guests">Number of Guests:</label>
+        <input id="guests" name="guests" type="number" min="1" required>
+        <button type="submit">Reserve Table</button>
+    </form>
+</section>
+<section aria-labelledby="menu-title">
+    <h2 id="menu-title">ETB Menu</h2>
+<table>
+    <caption>Habesha Eatery Menu Prices</caption>
+<thead>
+    <tr>
+        <th scope="col">Dish</th>
+        <th scope="col">Description</th>
+        <th scope="col">Price (ETB)</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>Doro Wat</td>
+        <td>Traditional Ethiopian chicken stew</td>
+        <td>450</td>
+    </tr>
+    <tr>
+        <td>Tibs</td>
+        <td>Sautéed beef with spices</td>
+        <td>380</td>
+    </tr>
+    <tr>
+        <td>Vegetarian Combo</td>
+        <td>Selection of Ethiopian vegetable dishes</td>
+        <td>300</td>
+    </tr>
+</tbody>
+</table>
+</section>
+<section aria-labelledby="media-title">
+        <h2 id="media-title">Restaurant Media</h2>
+    <figure>
+        <img src="restaurant.jpg"
+        alt="Traditional Ethiopian food served at Habesha Eatery" width="1000px">
+    <figcaption>
+        Fresh Ethiopian dishes prepared daily in Addis Ababa.
+    </figcaption>
+    </figure>
+    <audio controls>
+    <source src="coffee.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+    </audio>
+</section>
+</main>
+<footer>
+<p>&copy; 2026 Habesha Eatery Addis Ababa</p>
+</footer>
+</body>
+</html>
