@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+</head>
+<body>
+    <main>
+    <h1>Currency Converter</h1>
+
+    <p id="status"></p>
+
+    <form id="convert-form">
+        <label>
+        Amount
+        <input id="amount" type="number" step="any" min="0" required>
+        </label>
+
+        <label>
+        Currency
+        <select id="currency"></select>
+        </label>
+
+        <button type="submit">Convert</button>
+    </form>
+
+    <p id="result"></p>
+
+    <section>
+        <h2>Watchlist</h2>
+
+        <div>
+        <select id="watch-currency"></select>
+        <button id="add-watchlist" type="button">Add</button>
+        </div>
+
+        <ul id="watchlist"></ul>
+    </section>
+    </main>
+
+<script src="app.js"></script>
+</body>
+</html>

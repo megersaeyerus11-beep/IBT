@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #e8f5e9, #e3f2fd);
+  min-height: 100vh;
+  padding: 40px 20px;
+  color: #1f2937;
+}
+
+.container {
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #166534;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 25px;
+}
+
+
+/* Status */
+
+#status {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  color: #2563eb;
+  background: #eff6ff;
+}
+
+
+/* Form */
+
+#convert-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-weight: bold;
+  color: #374151;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.2s;
+}
+
+input:focus,
+select:focus {
+  border-color: #16a34a;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.12);
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+
+/* Convert button */
+
+#convert-form button {
+  background: #16a34a;
+  color: white;
+}
+
+#convert-form button:hover {
+  background: #15803d;
+}
+
+
+/* Result */
+
+#result {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #166534;
+  min-height: 50px;
+}
+
+
+/* Watchlist section */
+
+.watch-section {
+  margin-top: 30px;
+}
+
+.watch-section h2 {
+  margin-bottom: 15px;
+  color: #374151;
+}
+
+#watch {
+  width: 100%;
+  margin-bottom: 15px;
+  background: #2563eb;
+  color: white;
+}
+
+#watch:hover {
+  background: #1d4ed8;
+}
+
+
+/* Watchlist */
+
+#watchlist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#watchlist li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 14px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+
+/* Remove button */
+
+#watchlist .rm {
+width: 32px;
+height: 32px;
+padding: 0;
+background: #fee2e2;
+color: #dc2626;
+font-size: 20px;
+line-height: 1;
+}
+
+#watchlist .rm:hover {
+background: #fecaca;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+body {
+    padding: 20px 12px;
+}
+
+.card {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 26px;
+}
+
+#watchlist li {
+    font-size: 14px;}
+}

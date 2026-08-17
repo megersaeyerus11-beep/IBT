@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grocery Shopping List</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Addis Market List</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
+  <main class="container">
+    <h1>Grocery Shopping List</h1>
 
-    <body>
-        <h1>Addis Market List</h1>
+    <form id="grocery-form">
+      <input
+        type="text"
+        id="grocery-input"
+        placeholder="Enter a grocery item"
+        autocomplete="off"
+        required
+      >
+      <button type="submit">Add Item</button>
+    </form>
 
-        <!-- Form to add grocery items -->
-        <form id="add-form">
-            <input id="name" placeholder="e.g. Teff" />
-            <button type="submit">Add</button>
-        </form>
+    <p id="item-counter">Items: 0</p>
 
-        <!-- Paragraph for the live item counter -->
-        <p id="count">0 items</p>
+    <ul id="grocery-list"></ul>
+  </main>
 
-        <!-- Empty list to be populated by JavaScript -->
-        <ul id="list"></ul>
-
-        <script src="app.js"></script>
-    </body>
-
+  <script src="app.js"></script>
+</body>
 </html>

@@ -1,4 +1,5 @@
 
+
 'use strict';
 const bill=Number("500");
 let tip = 0;
@@ -25,5 +26,5 @@ break;
 default:
 fee = total * 0.02;
 }
-total = total + fee ;
+total = total + fee;
 console.log (`new total is ${total}`);

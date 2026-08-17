@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>BirrWatch Currency Converter </h1>
+<p id="status">Loading rates...</p>
+
+<form id="convert-form">
+    <input
+    id="amount"
+    type="number"
+    min="0"
+    step="any"
+    value="100">
+
+    <select id="currency"></select>
+
+    <button type="submit">Convert</button>
+</form>
+
+<p id="result"></p>
+
+<button id="watch" type="button">Add to Watchlist
+</button>
+
+<ul id="watchlist"></ul>
+
+</body>
+<script src="./app.js"></script>
+</html>

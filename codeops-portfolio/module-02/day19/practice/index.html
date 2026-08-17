@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 19 — DOM Exercises</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        max-width: 640px;
+        margin: 40px auto;
+        padding: 0 16px;
+        line-height: 1.5;
+      }
+      section {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 16px;
+        margin-bottom: 24px;
+      }
+      h2 {
+        margin-top: 0;
+        font-size: 1rem;
+        color: #555;
+      }
+      .highlight {
+        color: #0a7d3a;
+        text-decoration: underline;
+      }
+      #outer-div {
+        padding: 12px;
+        background: #f0f0f0;
+        border-radius: 6px;
+      }
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4px 0;
+      }
+      li button {
+        margin-left: 8px;
+      }
+      input[type="text"] {
+        padding: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Exercise 1: textContent + classList.toggle -->
+    <section id="ex1">
+      <h2>Exercise 1 — textContent &amp; classList.toggle</h2>
+      <h1 id="main-heading">Original Heading</h1>
+      <button id="ex1-btn">Change heading + toggle class</button>
+    </section>
+
+    <!-- Exercise 2: createElement + append -->
+    <section id="ex2">
+      <h2>Exercise 2 — createElement (Ethiopian cities)</h2>
+      <ul id="city-list"></ul>
+    </section>
+
+    <!-- Exercise 3: click listener + bubbling -->
+    <section id="ex3">
+      <h2>Exercise 3 — event.target &amp; bubbling</h2>
+      <div id="outer-div">
+        <button id="inner-btn">Click me (inside div)</button>
+      </div>
+      <p>Open the console to see the log order.</p>
+    </section>
+
+    <!-- Exercise 4: delegated delete listener -->
+    <section id="ex4">
+      <h2>Exercise 4 — Delegated delete listener</h2>
+      <ul id="delete-list"></ul>
+    </section>
+
+    
+    <section id="ex5">
+      <h2>Exercise 5 — Form submit</h2>
+      <form id="add-form">
+        <input type="text" id="add-input" placeholder="Type something..." />
+        <button type="submit">Add</button>
+      </form>
+      <ul id="submitted-list"></ul>
+    </section>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
