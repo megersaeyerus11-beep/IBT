@@ -1,6 +1,3 @@
-/* =====================================================
-   ADDIS EATS - FINAL CSS
-===================================================== */
 
 
 /* =========================
@@ -13,6 +10,103 @@
     box-sizing: border-box;
 }
 
+/* =========================
+   WELCOME
+========================= */
+
+.welcome {
+    text-align: center;
+
+    background: white;
+
+    padding: 35px 20px;
+
+    margin: 20px auto 10px;
+
+    max-width: 1250px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.welcome h2 {
+    font-size: 30px;
+
+    color: #8b0000;
+
+    margin-bottom: 8px;
+}
+
+.welcome p {
+    color: #666;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   CATEGORY BUTTONS
+========================= */
+
+.categories {
+    max-width: 1250px;
+
+    margin: 15px auto;
+
+    padding: 0 15px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+
+.category-btn {
+    padding: 9px 18px;
+
+    border: 1px solid #8b0000;
+
+    background: white;
+
+    color: #8b0000;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+
+.category-btn:hover {
+    background: #8b0000;
+
+    color: white;
+}
+
+
+.category-btn.active {
+    background: #8b0000;
+
+    color: white;
+}
+
+/* =========================
+   BODY
+========================= */
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #f5f5f5;
@@ -22,14 +116,13 @@ body {
 
 
 /* =========================
-   HEADER
+    HEADER
 ========================= */
 
 header {
     background: #8b0000;
     color: white;
-
-    padding: 20px 40px;
+    padding: 15px 30px;
 
     display: flex;
     align-items: center;
@@ -39,20 +132,18 @@ header {
 }
 
 header h1 {
-    font-size: 28px;
+    font-size: 26px;
     font-weight: bold;
 }
 
 #search {
-    width: 280px;
-
-    padding: 11px 14px;
+    width: 260px;
+    padding: 9px 12px;
 
     border: none;
-    border-radius: 7px;
+    border-radius: 6px;
 
-    font-size: 15px;
-
+    font-size: 14px;
     outline: none;
 }
 
@@ -66,17 +157,19 @@ header h1 {
 ========================= */
 
 main {
-    max-width: 1200px;
-
-    margin: 30px auto;
-
-    padding: 0 20px;
+    max-width: 1250px;
+    margin: 20px auto;
+    padding: 0 15px;
 
     display: grid;
 
-    grid-template-columns: 1fr 380px;
+    /*
+       LEFT = MENU
+       RIGHT = CART
+    */
+    grid-template-columns: minmax(0, 1fr) 330px;
 
-    gap: 30px;
+    gap: 20px;
 
     align-items: start;
 }
@@ -89,9 +182,14 @@ main {
 #menu {
     display: grid;
 
-    grid-template-columns: repeat(2, 1fr);
+    /*
+       5 FOOD CARDS ACROSS
+    */
+    grid-template-columns: repeat(5, minmax(0, 1fr));
 
-    gap: 20px;
+    gap: 12px;
+
+    align-items: start;
 }
 
 
@@ -102,11 +200,18 @@ main {
 .dish {
     background: white;
 
-    padding: 20px;
+    padding: 10px;
 
-    border-radius: 10px;
+    border-radius: 8px;
 
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.10);
+
+    /*
+       IMPORTANT:
+       Do NOT use width: 200px here.
+    */
+    width: auto;
+    min-width: 0;
 
     transition:
         transform 0.2s ease,
@@ -114,52 +219,96 @@ main {
 }
 
 .dish:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 
-    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.12);
-}
-
-.dish h3 {
-    font-size: 20px;
-
-    margin-bottom: 7px;
-}
-
-.catagory {
-    color: #777;
-
-    font-size: 14px;
-
-    margin-bottom: 8px;
-}
-
-.dish > p:not(.price):not(.catagory) {
-    font-size: 14px;
-
-    color: #555;
-}
-
-.price {
-    color: #8b0000;
-
-    font-size: 18px;
-
-    font-weight: bold;
-
-    margin-top: 10px;
+    box-shadow:
+        0 5px 14px rgba(0, 0, 0, 0.15);
 }
 
 
 /* =========================
-   ADD BUTTON
+   FOOD IMAGE
+========================= */
+
+.dish .image {
+    width: 100%;
+    height: 105px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 6px;
+
+    margin-bottom: 7px;
+}
+
+
+/* =========================
+   FOOD NAME
+========================= */
+
+.dish h3 {
+    font-size: 15px;
+    font-weight: bold;
+
+    margin-bottom: 3px;
+
+    line-height: 1.2;
+}
+
+
+/* =========================
+   CATEGORY
+========================= */
+
+.catagory {
+    color: #777;
+
+    font-size: 11px;
+
+    margin-bottom: 4px;
+}
+
+
+/* =========================
+   SPICY
+========================= */
+
+.dish > p:not(.price):not(.catagory) {
+    font-size: 11px;
+
+    color: #555;
+
+    margin: 3px 0;
+}
+
+
+/* =========================
+   PRICE
+========================= */
+
+.price {
+    color: #8b0000;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-top: 6px;
+}
+
+
+/* =========================
+   ADD ORDER BUTTON
 ========================= */
 
 .add {
     width: 100%;
 
-    margin-top: 15px;
+    margin-top: 7px;
 
-    padding: 11px;
+    padding: 7px 4px;
 
     background: #8b0000;
 
@@ -167,15 +316,15 @@ main {
 
     border: none;
 
-    border-radius: 6px;
+    border-radius: 5px;
 
-    font-size: 15px;
+    font-size: 11px;
 
     font-weight: bold;
 
     cursor: pointer;
 
-    transition: background 0.2s;
+    transition: background 0.2s ease;
 }
 
 .add:hover {
@@ -194,27 +343,37 @@ main {
 #cart {
     background: white;
 
-    padding: 22px;
+    padding: 16px;
 
-    border-radius: 10px;
+    border-radius: 8px;
 
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.10);
 
     position: sticky;
 
-    top: 20px;
+    top: 15px;
 
-    max-height: calc(100vh - 40px);
+    /*
+       Cart stays scrollable
+       when it becomes tall.
+    */
+    max-height: calc(100vh - 30px);
 
     overflow-y: auto;
 }
 
+
+/* =========================
+   CART TITLE
+========================= */
+
 #cart h2 {
-    color: #8b0000;
+    color: #222;
 
-    font-size: 22px;
+    font-size: 20px;
 
-    margin-bottom: 18px;
+    margin-bottom: 12px;
 }
 
 
@@ -224,10 +383,15 @@ main {
 
 #cart ul {
     list-style: none;
+
+    padding: 0;
+
+    margin: 0;
 }
 
+
 #cart li {
-    padding: 14px 0;
+    padding: 10px 0;
 
     border-bottom: 1px solid #ddd;
 
@@ -235,7 +399,7 @@ main {
 
     align-items: center;
 
-    gap: 10px;
+    gap: 8px;
 
     flex-wrap: wrap;
 }
@@ -250,21 +414,17 @@ main {
 
     flex-direction: column;
 
-    gap: 3px;
+    gap: 2px;
 
     flex: 1;
 
     min-width: 100px;
 }
 
-.cart-info strong {
-    font-size: 15px;
-}
-
 .cart-info span {
-    color: #777;
-
     font-size: 12px;
+
+    color: #333;
 }
 
 
@@ -277,23 +437,23 @@ main {
 
     align-items: center;
 
-    gap: 7px;
+    gap: 5px;
 }
 
-.quantity button {
-    width: 29px;
 
-    height: 29px;
+.quantity button {
+    width: 25px;
+    height: 25px;
 
     border: none;
 
-    border-radius: 5px;
+    border-radius: 4px;
 
     background: #8b0000;
 
     color: white;
 
-    font-size: 18px;
+    font-size: 15px;
 
     line-height: 1;
 
@@ -308,10 +468,13 @@ main {
     transform: scale(0.9);
 }
 
+
 .quantity span {
-    min-width: 20px;
+    min-width: 18px;
 
     text-align: center;
+
+    font-size: 13px;
 
     font-weight: bold;
 }
@@ -328,13 +491,13 @@ main {
 
     color: #b00000;
 
-    padding: 6px 9px;
+    padding: 5px 7px;
 
-    border-radius: 5px;
+    border-radius: 4px;
 
     cursor: pointer;
 
-    font-size: 12px;
+    font-size: 11px;
 }
 
 .rm:hover {
@@ -345,19 +508,41 @@ main {
 
 
 /* =========================
+   CART SUMMARY
+========================= */
+
+.cart-summary {
+    margin-top: 15px;
+
+    padding-top: 12px;
+
+    border-top: 1px solid #ddd;
+}
+
+
+.cart-summary p {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin: 7px 0;
+
+    font-size: 13px;
+}
+
+
+/* =========================
    TOTAL
 ========================= */
 
-.total {
-    margin-top: 20px;
+.cart-summary .total {
+    margin-top: 10px;
 
-    padding-top: 15px;
+    padding-top: 10px;
 
     border-top: 2px solid #8b0000;
 
-    text-align: right;
-
-    font-size: 20px;
+    font-size: 17px;
 
     font-weight: bold;
 }
@@ -368,22 +553,24 @@ main {
 ========================= */
 
 #checkout {
-    margin-top: 25px;
+    margin-top: 18px;
 
-    padding-top: 20px;
+    padding-top: 15px;
 
     border-top: 1px solid #ddd;
 }
 
+
 #checkout label {
     display: block;
 
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 
     font-weight: bold;
 
-    font-size: 14px;
+    font-size: 13px;
 }
+
 
 #checkout input,
 #checkout select {
@@ -391,26 +578,28 @@ main {
 
     width: 100%;
 
-    margin-top: 7px;
+    margin-top: 5px;
 
-    padding: 11px;
+    padding: 9px;
 
     border: 1px solid #ccc;
 
-    border-radius: 6px;
+    border-radius: 5px;
 
     background: white;
 
-    font-size: 14px;
+    font-size: 13px;
 
     outline: none;
 }
+
 
 #checkout input:focus,
 #checkout select:focus {
     border-color: #8b0000;
 
-    box-shadow: 0 0 0 2px rgba(139, 0, 0, 0.1);
+    box-shadow:
+        0 0 0 2px rgba(139, 0, 0, 0.1);
 }
 
 
@@ -421,24 +610,24 @@ main {
 .error {
     color: #d00000;
 
-    font-size: 14px;
+    font-size: 12px;
 
-    margin: 8px 0;
+    margin: 7px 0;
 
-    min-height: 18px;
+    min-height: 16px;
 }
 
 
 /* =========================
-   PLACE ORDER
+   ORDER BUTTON
 ========================= */
 
 #checkout button[type="submit"] {
     width: 100%;
 
-    padding: 12px;
+    padding: 10px;
 
-    margin-top: 5px;
+    margin-top: 4px;
 
     background: #8b0000;
 
@@ -446,18 +635,20 @@ main {
 
     border: none;
 
-    border-radius: 7px;
+    border-radius: 6px;
 
-    font-size: 16px;
+    font-size: 14px;
 
     font-weight: bold;
 
     cursor: pointer;
 }
 
+
 #checkout button[type="submit"]:hover {
     background: #a50000;
 }
+
 
 #checkout button[type="submit"]:active {
     transform: scale(0.98);
@@ -465,7 +656,7 @@ main {
 
 
 /* =========================
-   EMPTY CART
+   EMPTY CART / NO RESULTS
 ========================= */
 
 .empty {
@@ -473,7 +664,9 @@ main {
 
     text-align: center;
 
-    padding: 25px 10px;
+    padding: 20px 10px;
+
+    font-size: 13px;
 }
 
 
@@ -484,11 +677,11 @@ main {
 footer {
     text-align: center;
 
-    padding: 25px 15px;
+    padding: 20px 15px;
 
     color: #777;
 
-    font-size: 14px;
+    font-size: 13px;
 }
 
 
@@ -514,9 +707,11 @@ footer {
     z-index: 1000;
 }
 
+
 .confirmation.hidden {
     display: none;
 }
+
 
 .confirmation-box {
     width: 100%;
@@ -535,12 +730,15 @@ footer {
 
     text-align: center;
 
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.3);
 
     animation: popup 0.25s ease;
 }
 
+
 @keyframes popup {
+
     from {
         transform: scale(0.9);
 
@@ -555,7 +753,9 @@ footer {
 }
 
 
-/* SUCCESS ICON */
+/* =========================
+   SUCCESS ICON
+========================= */
 
 .success-icon {
     width: 60px;
@@ -581,11 +781,13 @@ footer {
     font-weight: bold;
 }
 
+
 .confirmation-box h2 {
     color: #2e8b57;
 
     margin-bottom: 8px;
 }
+
 
 .confirmation-box > p {
     color: #666;
@@ -594,7 +796,9 @@ footer {
 }
 
 
-/* ORDER DETAILS */
+/* =========================
+   ORDER DETAILS
+========================= */
 
 #order-details {
     text-align: left;
@@ -608,19 +812,23 @@ footer {
     margin-bottom: 20px;
 }
 
+
 .order-info {
     margin-bottom: 15px;
 }
 
+
 .order-info p {
     margin: 6px 0;
 }
+
 
 .order-items {
     border-top: 1px solid #ddd;
 
     padding-top: 12px;
 }
+
 
 .order-item {
     display: flex;
@@ -631,6 +839,7 @@ footer {
 
     padding: 7px 0;
 }
+
 
 .order-total {
     border-top: 2px solid #8b0000;
@@ -649,7 +858,9 @@ footer {
 }
 
 
-/* DONE */
+/* =========================
+   CLOSE CONFIRMATION
+========================= */
 
 #close-confirmation {
     width: 100%;
@@ -671,8 +882,33 @@ footer {
     cursor: pointer;
 }
 
+
 #close-confirmation:hover {
     background: #a50000;
+}
+
+
+/* =====================================================
+   LARGE TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    main {
+        grid-template-columns: minmax(0, 1fr) 300px;
+
+        gap: 15px;
+    }
+
+    #menu {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+
+        gap: 10px;
+    }
+
+    .dish .image {
+        height: 100px;
+    }
 }
 
 
@@ -680,24 +916,10 @@ footer {
    TABLET
 ===================================================== */
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
 
     header {
-        flex-direction: column;
-
-        gap: 15px;
-
-        padding: 20px;
-    }
-
-    header h1 {
-        font-size: 25px;
-    }
-
-    #search {
-        width: 100%;
-
-        max-width: 500px;
+        padding: 15px 20px;
     }
 
     main {
@@ -707,7 +929,7 @@ footer {
     }
 
     #menu {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     #cart {
@@ -721,7 +943,51 @@ footer {
 
 
 /* =====================================================
-                MOBILE
+   SMALL TABLET / LARGE PHONE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 12px;
+
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    #search {
+        width: 100%;
+
+        max-width: 400px;
+    }
+
+    main {
+        padding: 0 12px;
+    }
+
+    #menu {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+    }
+
+    .dish {
+        padding: 9px;
+    }
+
+    .dish .image {
+        height: 120px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
 ===================================================== */
 
 @media (max-width: 500px) {
@@ -735,76 +1001,70 @@ footer {
     }
 
     header h1 {
-        font-size: 23px;
-    }
-
-    #search {
-        width: 100%;
+        font-size: 22px;
     }
 
     main {
         display: block;
 
-        padding: 0 12px;
+        padding: 0 10px;
 
         margin: 15px auto;
     }
 
     #menu {
-        display: grid;
-
         grid-template-columns: 1fr;
 
-        gap: 15px;
+        gap: 12px;
     }
 
     .dish {
-        padding: 16px;
+        padding: 12px;
+    }
+
+    .dish .image {
+        height: 180px;
     }
 
     .dish h3 {
         font-size: 18px;
     }
 
+    .catagory {
+        font-size: 13px;
+    }
+
+    .dish > p:not(.price):not(.catagory) {
+        font-size: 13px;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+
+    .add {
+        padding: 10px;
+
+        font-size: 13px;
+    }
+
     #cart {
         margin-top: 20px;
 
-        padding: 16px;
-    }
-
-    #cart li {
-        gap: 8px;
-    }
-
-    .cart-info {
-        min-width: 120px;
-    }
-
-    .quantity {
-        order: 2;
-    }
-
-    .rm {
-        order: 3;
+        padding: 15px;
     }
 
     #checkout input,
     #checkout select {
         font-size: 16px;
 
-        padding: 12px;
+        padding: 11px;
     }
 
     #checkout button[type="submit"] {
-        padding: 13px;
+        padding: 12px;
 
-        font-size: 16px;
-    }
-
-    footer {
-        padding: 20px 10px;
-
-        font-size: 13px;
+        font-size: 15px;
     }
 
 
@@ -869,29 +1129,6 @@ footer {
     .confirmation-box {
         padding: 18px;
     }
+
+    
 }
-
-
-
-.cart-summary {
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px solid #ddd;
-}
-
-.cart-summary p {
-    display: flex;
-    justify-content: space-between;
-    margin: 8px 0;
-}
-
-.cart-summary .total {
-    margin-top: 12px;
-    padding-top: 12px;
-    border-top: 2px solid #8b0000;
-
-    font-size: 20px;
-    font-weight: bold;
-}
-
-

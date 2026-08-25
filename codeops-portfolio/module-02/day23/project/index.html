@@ -12,28 +12,70 @@
 
 <body>
 
+    <!-- HEADER -->
     <header>
         <h1>Addis Eats</h1>
 
         <input
             id="search"
-            type="text"
+            type="search"
             placeholder="Search dishes..."
         >
     </header>
 
 
+    <!-- WELCOME SECTION -->
+    <section class="welcome">
+
+        <h2>Welcome to Addis Eats</h2>
+
+        <p>
+            Enjoy delicious Ethiopian food delivered to your door.
+        </p>
+
+    </section>
+
+
+    <!-- CATEGORY MENU -->
+    <nav class="categories" aria-label="Food categories">
+
+        <button class="category-btn active" data-category="All">
+            All
+        </button>
+
+        <button class="category-btn" data-category="Main">
+            Main
+        </button>
+
+        <button class="category-btn" data-category="Vegetarian">
+            Vegetarian
+        </button>
+
+        <button class="category-btn" data-category="Breakfast">
+            Breakfast
+        </button>
+
+        <button class="category-btn" data-category="Side">
+            Side
+        </button>
+
+    </nav>
+
+
+    <!-- MAIN -->
     <main>
 
-        <section
-            id="menu"
-            aria-label="Menu">
+        <section class="menu-section">
+
+            <h2>Our Menu</h2>
+
+            <section id="menu"></section>
+
         </section>
 
 
-        <aside
-            id="cart"
-            aria-label="Your order">
+        <!-- CART -->
+        <aside id="cart" aria-label="Your order">
 
             <h2>Your order</h2>
 
@@ -43,11 +85,26 @@
 
         </aside>
 
+        <label>Payment Method</label>
+
+<select id="payment">
+    <option value="telebirr">Telebirr</option>
+    <option value="cash">Cash on Delivery</option>
+</select>
+
+<div id="telebirr-payment">
+    <p>Pay with Telebirr</p>
+    <p>Telebirr Number: 09xxxxxxxx</p>
+    <p>Amount: <span id="payment-total">0</span> ETB</p>
+</div>
+
     </main>
 
 
     <footer>
-        <p>Bole, Addis Ababa · TeleBirr</p>
+        <p>
+            Bole, Addis Ababa · TeleBirr
+        </p>
     </footer>
 
 

@@ -5,7 +5,8 @@ const STORAGE_KEY = "addiseats";
 const state = {
 dishes: [],  
 cart: [], 
-search: "", 
+search: "",
+category: "All" 
 };
 
 const menuEl = document.querySelector("#menu");
@@ -32,30 +33,112 @@ menuEl.textContent = "Could not load the menu.";
 
 
 function render() {
-const term = state.search.toLowerCase();
-const shown = state.dishes.filter(d =>
-    d.name.toLowerCase().includes(term));
-if(shown.length === 0){
-    menuEl.innerHTML = `<p class="empty">No dishes found</p>`
-}
-else{
 
-menuEl.innerHTML = shown.map(d => `
-    <article class="dish" data-id="${d.id}">
-    <h3>${d.name}</h3>
-<p class="catagory">${d.category}</p>
-<p>${d.spicy ? "spicy" : "Not-spicy"}</p>
-<p class="price">${d.price} ETB</p>
-<button class="add">Add order</button>
-</article>`).join("");
+    const term = state.search.toLowerCase();
 
+    const shown = state.dishes.filter(d => {
+
+        const matchesSearch =
+            d.name.toLowerCase().includes(term);
+
+        const matchesCategory =
+            state.category === "All" ||
+            d.category === state.category;
+
+        return matchesSearch && matchesCategory;
+    });
+
+
+    if (shown.length === 0) {
+
+        menuEl.innerHTML = `
+            <p class="empty">
+                No dishes found
+            </p>
+        `;
+
+    } else {
+
+        menuEl.innerHTML = shown.map(d => `
+
+            <article class="dish" data-id="${d.id}">
+
+                <img
+                    src="${d.image}"
+                    alt="${d.name}"
+                    class="image"
+                >
+
+                <h3>${d.name}</h3>
+
+                <p class="catagory">
+                    ${d.category}
+                </p>
+
+                <p>
+                    ${d.spicy ? "🌶️ Spicy" : "Not spicy"}
+                </p>
+
+                <p class="price">
+                    ${d.price} ETB
+                </p>
+
+                <button class="add">
+                    Add order
+                </button>
+
+            </article>
+
+        `).join("");
+    }
+
+    renderCart();
 }
-renderCart();
-}
+
 searchEl.addEventListener("input", (e) => {
 state.search = e.target.value;
 render();
 });
+
+const categoryButtons =
+    document.querySelectorAll(".category-btn");
+
+
+categoryButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        state.category =
+            button.dataset.category;
+
+
+        categoryButtons.forEach(btn => {
+            btn.classList.remove("active");
+        });
+
+
+        button.classList.add("active");
+
+
+        render();
+    });
+
+});
+
+function cartTotal() {
+    return state.cart.reduce(
+        (sum, i) => sum + i.price * i.qty,
+        0
+    );
+}
+
+function deliveryFee() {
+    if (cartTotal() >= FREE_DELIVERY_OVER) {
+        return 0;
+    } else {
+        return DELIVERY_FEE;
+    }
+}
 
 function finalTotal() {
     return cartTotal() + deliveryFee();
@@ -142,7 +225,7 @@ function renderCart(){
             Map Location 
                 <input
                     id="Location"
-                    type="Map"
+                    type="url"
                     placeholder="https://maps.app.goo.gl/xxxxxxxxxxx">
             </label>
             <p
