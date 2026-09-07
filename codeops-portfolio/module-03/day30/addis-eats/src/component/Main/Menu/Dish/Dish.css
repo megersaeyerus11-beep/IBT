@@ -1,0 +1,39 @@
+.card {
+  padding: 18px;
+  background-color: #ffffff;
+  border: 1px solid #e0d8c3;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card-title h3 {
+  margin: 0 0 10px;
+  color: #1b4332;
+}
+
+.card p {
+  margin: 0 0 14px;
+  color: #b7791f;
+  font-weight: bold;
+}
+
+.card button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #d4a017;
+  color: white;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #b8860b;
+}
+
+
+.spicy{
+  color: red;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: larger;
+}
