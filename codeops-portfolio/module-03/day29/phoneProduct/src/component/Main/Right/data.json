@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "name": "iPhone 15 Pro",
+    "price": 999.00,
+    "category": "Smartphones",
+    "brand": "Apple",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Natural Titanium",
+    "inStock": true
+  },
+  {
+    "id": 2,
+    "name": "Galaxy S24 Ultra",
+    "price": 1299.99,
+    "category": "Smartphones",
+    "brand": "Samsung",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Titanium Gray",
+    "inStock": true
+  },
+  {
+    "id": 3,
+    "name": "Pixel 8 Pro",
+    "price": 899.00,
+    "category": "Smartphones",
+    "brand": "Google",
+    "storage": "128GB",
+    "ram": "12GB",
+    "color": "Obsidian",
+    "inStock": true
+  },
+  {
+    "id": 4,
+    "name": "OnePlus 12",
+    "price": 799.00,
+    "category": "Smartphones",
+    "brand": "OnePlus",
+    "storage": "256GB",
+    "ram": "16GB",
+    "color": "Silky Black",
+    "inStock": false
+  },
+  {
+    "id": 5,
+    "name": "Xiaomi 14 Pro",
+    "price": 749.50,
+    "category": "Smartphones",
+    "brand": "Xiaomi",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Titanium Special Edition",
+    "inStock": true
+  },
+  {
+    "id": 6,
+    "name": "iPhone 14",
+    "price": 699.00,
+    "category": "Smartphones",
+    "brand": "Apple",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Blue",
+    "inStock": true
+  },
+  {
+    "id": 7,
+    "name": "Galaxy A55 5G",
+    "price": 449.99,
+    "category": "Smartphones",
+    "brand": "Samsung",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Awesome Iceblue",
+    "inStock": true
+  },
+  {
+    "id": 8,
+    "name": "Xperia 1 VI",
+    "price": 1399.00,
+    "category": "Smartphones",
+    "brand": "Sony",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Khaki Green",
+    "inStock": false
+  },
+  {
+    "id": 9,
+    "name": "ROG Phone 8 Pro",
+    "price": 1199.00,
+    "category": "Gaming Phones",
+    "brand": "Asus",
+    "storage": "512GB",
+    "ram": "16GB",
+    "color": "Phantom Black",
+    "inStock": true
+  },
+  {
+    "id": 10,
+    "name": "Moto Edge 50 Pro",
+    "price": 599.00,
+    "category": "Smartphones",
+    "brand": "Motorola",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Luxe Lavender",
+    "inStock": true
+  },
+  {
+    "id": 11,
+    "name": "iPhone SE (3rd Gen)",
+    "price": 429.00,
+    "category": "Smartphones",
+    "brand": "Apple",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "inStock": true
+  },
+  {
+    "id": 12,
+    "name": "Galaxy Z Flip 5",
+    "price": 999.99,
+    "category": "Foldable Phones",
+    "brand": "Samsung",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Mint",
+    "inStock": true
+  },
+  {
+    "id": 13,
+    "name": "Pixel 7a",
+    "price": 379.00,
+    "category": "Smartphones",
+    "brand": "Google",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Sea",
+    "inStock": false
+  },
+  {
+    "id": 14,
+    "name": "Redmi Note 13 Pro+",
+    "price": 399.00,
+    "category": "Smartphones",
+    "brand": "Xiaomi",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Aurora Purple",
+    "inStock": true
+  },
+  {
+    "id": 15,
+    "name": "Nothing Phone (2)",
+    "price": 619.00,
+    "category": "Smartphones",
+    "brand": "Nothing",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Dark Grey",
+    "inStock": true
+  },
+  {
+    "id": 16,
+    "name": "Galaxy Z Fold 5",
+    "price": 1799.99,
+    "category": "Foldable Phones",
+    "brand": "Samsung",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Icy Blue",
+    "inStock": false
+  },
+  {
+    "id": 17,
+    "name": "Poco X6 Pro",
+    "price": 349.00,
+    "category": "Smartphones",
+    "brand": "Poco",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Yellow",
+    "inStock": true
+  },
+  {
+    "id": 18,
+    "name": "iPhone 15",
+    "price": 799.00,
+    "category": "Smartphones",
+    "brand": "Apple",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Pink",
+    "inStock": true
+  },
+  {
+    "id": 19,
+    "name": "Honor Magic 6 Pro",
+    "price": 1049.00,
+    "category": "Smartphones",
+    "brand": "Honor",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Epi Green",
+    "inStock": true
+  },
+  {
+    "id": 20,
+    "name": "Zenfone 10",
+    "price": 699.00,
+    "category": "Smartphones",
+    "brand": "Asus",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Aurora Green",
+    "inStock": true
+  }
+]
