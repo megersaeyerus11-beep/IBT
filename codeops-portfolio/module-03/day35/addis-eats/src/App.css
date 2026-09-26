@@ -1,0 +1,28 @@
+.layout {
+  display: flex;
+  min-height: 500px;
+}
+
+header {
+  height: 80px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+aside {
+  width: 200px;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+main {
+  flex: 1;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+footer {
+  height: 80px;
+  border: 1px solid black;
+  text-align: center;
+}

@@ -1,0 +1,418 @@
+{
+  "status": "ok",
+  "data": [
+    {
+      "id": "menu-1",
+      "slug": "doro-wat",
+      "nameEn": "Classic Doro Wat",
+      "nameAm": "የዶሮ ወጥ",
+      "category": "Traditional Stews & Wat",
+      "priceETB": 650,
+      "image": "/images/doro-wat.jpg",
+      "spiceLevel": "Fiery Berbere (3/3)",
+      "isFasting": false,
+      "isSpecial": true,
+      "description": "Classic Ethiopian chicken stew cooked slowly with berbere, onions, butter and boiled egg.",
+      "ingredients": [
+        "Chicken",
+        "Berbere",
+        "Onion",
+        "Niter Kibbeh",
+        "Egg"
+      ],
+      "servings": "Serves 1-2 generously"
+    },
+    {
+      "id": "menu-2",
+      "slug": "siga-wat",
+      "nameEn": "Prime Siga Wat (Beef Stew)",
+      "nameAm": "ሥጋ ወጥ",
+      "category": "Traditional Stews & Wat",
+      "priceETB": 580,
+      "image": "/images/siga-wat.jpg",
+      "spiceLevel": "Hot Berbere (3/3)",
+      "isFasting": false,
+      "isSpecial": false,
+      "description": "Rich Ethiopian beef stew prepared with berbere and traditional spices.",
+      "ingredients": [
+        "Beef",
+        "Berbere",
+        "Onion",
+        "Garlic",
+        "Niter Kibbeh"
+      ],
+      "servings": "Serves 1-2"
+    },
+    {
+      "id": "menu-3",
+      "slug": "beg-alicha-wat",
+      "nameEn": "Beg Alicha Wat (Mild Lamb Stew)",
+      "nameAm": "በግ አሊቻ ወጥ",
+      "category": "Traditional Stews & Wat",
+      "priceETB": 620,
+      "image": "/images/beg-alicha-wat.jpg",
+      "spiceLevel": "Mild (1/3)",
+      "isFasting": false,
+      "isSpecial": false,
+      "description": "Tender lamb cooked in a mild turmeric-based Ethiopian sauce.",
+      "ingredients": [
+        "Lamb",
+        "Turmeric",
+        "Onion",
+        "Garlic",
+        "Ginger"
+      ],
+      "servings": "Serves 1-2"
+    },
+    {
+      "id": "menu-4",
+      "slug": "shiro-tegamino",
+      "nameEn": "Clay-Pot Shiro Tegamino",
+      "nameAm": "ሽሮ ተጋሚኖ",
+      "category": "Traditional Stews & Wat",
+      "priceETB": 420,
+      "image": "/images/shiro-tegamino.jpg",
+      "spiceLevel": "Medium (2/3)",
+      "isFasting": true,
+      "isSpecial": false,
+      "description": "Smooth chickpea stew prepared traditionally and served bubbling hot in a clay pot.",
+      "ingredients": [
+        "Shiro Powder",
+        "Onion",
+        "Garlic",
+        "Tomato",
+        "Spices"
+      ],
+      "servings": "Serves 1"
+    },
+    {
+      "id": "menu-5",
+      "slug": "shiro-bozena",
+      "nameEn": "Shiro Bozena",
+      "nameAm": "ሽሮ በስጋ",
+      "category": "Traditional Stews & Wat",
+      "priceETB": 490,
+      "image": "/images/shiro-bozena.jpg",
+      "spiceLevel": "Medium (2/3)",
+      "isFasting": false,
+      "isSpecial": false,
+      "description": "Creamy shiro combined with tender pieces of beef and Ethiopian spices.",
+      "ingredients": [
+        "Shiro",
+        "Beef",
+        "Onion",
+        "Garlic",
+        "Berbere"
+      ],
+      "servings": "Serves 1"
+    },
+    {
+      "id": "menu-6",
+      "slug": "siga-derek-tibs",
+      "nameEn": "Crisp Siga Derek Tibs",
+      "nameAm": "ሥጋ ደረቅ ጥብስ",
+      "category": "Tibs & Grills",
+      "priceETB": 620,
+      "image": "/images/siga-derek-tibs.jpg",
+      "spiceLevel": "Hot (3/3)",
+      "isFasting": false,
+      "isSpecial": true,
+      "description": "Tender beef cubes grilled with peppers, rosemary and Ethiopian spices.",
+      "ingredients": [
+        "Beef",
+        "Pepper",
+        "Rosemary",
+        "Onion",
+        "Spices"
+      ],
+      "servings": "Serves 1-2"
+    },
+    {
+      "id": "menu-7",
+      "slug": "awaze-lamb-tibs",
+      "nameEn": "Awaze Lamb Tibs",
+      "nameAm": "አዋዜ የበግ ጥብስ",
+      "category": "Tibs & Grills",
+      "priceETB": 680,
+      "image": "/images/awaze-lamb-tibs.jpg",
+      "spiceLevel": "Spicy (3/3)",
+      "isFasting": false,
+      "isSpecial": false,
+      "description": "Juicy lamb tibs tossed with spicy awaze sauce and fresh vegetables.",
+      "ingredients": [
+        "Lamb",
+        "Awaze",
+        "Onion",
+        "Pepper",
+        "Rosemary"
+      ],
+      "servings": "Serves 1-2"
+    },
+    {
+      "id": "menu-8",
+      "slug": "quanta-firfir",
+      "nameEn": "Spicy Quanta Firfir",
+      "nameAm": "ቋንጣ ፍርፍር",
+      "category": "Tibs & Grills",
+      "priceETB": 540,
+      "image": "/images/quanta-firfir.jpg",
+      "spiceLevel": "Fiery (3/3)",
+      "isFasting": false,
+      "isSpecial": false,
+      "description": "Shredded injera mixed with dried beef and spicy Ethiopian sauce.",
+      "ingredients": [
+        "Quanta",
+        "Injera",
+        "Berbere",
+        "Onion",
+        "Niter Kibbeh"
+      ],
+      "servings": "Serves 1"
+    },
+    {
+      "id": "menu-9",
+      "slug": "chornake-fish-tibs",
+      "nameEn": "Lake Tana Crispy Fish Tibs",
+      "nameAm": "የጣና ሐይቅ ዓሳ ጥብስ",
+      "category": "Tibs & Grills",
+      "priceETB": 560,
+      "image": "/images/fish-tibs.jpg",
+      "spiceLevel": "Medium (2/3)",
+      "isFasting": true,
+      "isSpecial": false,
+      "description": "Crispy fish pieces seasoned with Ethiopian spices and served with fresh vegetables.",
+      "ingredients": [
+        "Fish",
+        "Pepper",
+        "Onion",
+        "Garlic",
+        "Lemon"
+      ],
+      "servings": "Serves 1"
+    },
+    {
+      "id": "menu-10",
+      "slug": "prime-beef-kitfo",
+      "nameEn": "Prime Beef Kitfo",
+      "nameAm": "ክትፎ",
+      "category": "Raw & Cured Delicacies / Kitfo",
+      "priceETB": 720,
+      "image": "/images/kitfo.jpg",
+      "spiceLevel": "Medium (2/3)",
+      "isFasting": false,
+      "isSpecial": true,
+      "description": "Finely minced premium beef seasoned with mitmita and Ethiopian spiced butter.",
+      "ingredients": [
+        "Premium Beef",
+        "Mitmita",
+        "Niter Kibbeh",
+        "Korem"
+      ],
+      "servings": "Serves 1"
+    },
+    {
+      "id": "menu-11",
+      "slug": "gored-gored",
+      "nameEn": "Highland Gored Gored",
+      "nameAm": "ጎረድ ጎረድ",
+      "category": "Raw & Cured Delicacies / Kitfo",
+      "priceETB": 750,
+      "image": "/images/gored-gored.jpg",
+      "spiceLevel": "Hot (3/3)",
+      "isFasting": false,
+      "isSpecial": false,
+      "description": "Traditional cubed beef delicacy seasoned with Ethiopian spices.",
+      "ingredients": [
+        "Beef",
+        "Mitmita",
+        "Niter Kibbeh",
+        "Awaze"
+      ],
+      "servings": "Serves 1"
+    },
+    {
+      "id": "menu-12",
+      "slug": "kitfo-dulet",
+      "nameEn": "Addis Style Dulet",
+      "nameAm": "ዱለት",
+      "category": "Raw & Cured Delicacies / Kitfo",
+      "priceETB": 580,
+      "image": "/images/dulet.jpg",
+      "spiceLevel": "Hot (3/3)",
+      "isFasting": false,
+      "isSpecial": false,
+      "description": "Traditional finely chopped meat dish prepared with herbs and Ethiopian spices.",
+      "ingredients": [
+        "Beef",
+        "Liver",
+        "Onion",
+        "Mitmita",
+        "Niter Kibbeh"
+      ],
+      "servings": "Serves 1"
+    },
+    {
+      "id": "menu-13",
+      "slug": "full-vegan-beyaynetu",
+      "nameEn": "Full Vegan Beyaynetu Platter",
+      "nameAm": "የፆም በያይነት",
+      "category": "Fasting & Vegan / Tsom",
+      "priceETB": 480,
+      "image": "/images/beyaynetu.jpg",
+      "spiceLevel": "Mixed",
+      "isFasting": true,
+      "isSpecial": true,
+      "description": "A colorful platter of traditional Ethiopian vegan dishes served with injera.",
+      "ingredients": [
+        "Misir Wat",
+        "Shiro",
+        "Gomen",
+        "Kik Alicha",
+        "Injera"
+      ],
+      "servings": "Serves 1-2"
+    },
+    {
+      "id": "menu-14",
+      "slug": "misir-wat",
+      "nameEn": "Highland Red Misir Wat",
+      "nameAm": "ምስር ወጥ",
+      "category": "Fasting & Vegan / Tsom",
+      "priceETB": 360,
+      "image": "/images/misir-wat.jpg",
+      "spiceLevel": "Hot (3/3)",
+      "isFasting": true,
+      "isSpecial": false,
+      "description": "Red lentils slowly cooked with berbere and aromatic Ethiopian spices.",
+      "ingredients": [
+        "Red Lentils",
+        "Berbere",
+        "Onion",
+        "Garlic",
+        "Ginger"
+      ],
+      "servings": "Serves 1"
+    },
+    {
+      "id": "menu-15",
+      "slug": "kik-alicha-wat",
+      "nameEn": "Golden Kik Alicha",
+      "nameAm": "ክክ አሊቻ",
+      "category": "Fasting & Vegan / Tsom",
+      "priceETB": 340,
+      "image": "/images/kik-alicha-wat.jpg",
+      "spiceLevel": "Mild (1/3)",
+      "isFasting": true,
+      "isSpecial": false,
+      "description": "Yellow split peas cooked gently with turmeric, garlic and ginger.",
+      "ingredients": [
+        "Split Peas",
+        "Turmeric",
+        "Garlic",
+        "Ginger",
+        "Onion"
+      ],
+      "servings": "Serves 1"
+    },
+    {
+      "id": "menu-16",
+      "slug": "gomen-collards",
+      "nameEn": "Braised Ye'abesha Gomen",
+      "nameAm": "የአበሻ ጎመን",
+      "category": "Fasting & Vegan / Tsom",
+      "priceETB": 320,
+      "image": "/images/gomen.jpg",
+      "spiceLevel": "Mild (1/3)",
+      "isFasting": true,
+      "isSpecial": false,
+      "description": "Slow-braised Ethiopian collard greens seasoned with garlic and spices.",
+      "ingredients": [
+        "Collard Greens",
+        "Garlic",
+        "Ginger",
+        "Onion",
+        "Spices"
+      ],
+      "servings": "Serves 1"
+    },
+    {
+      "id": "menu-17",
+      "slug": "fresh-timatim-fitfit",
+      "nameEn": "Fresh Timatim Fitfit",
+      "nameAm": "ቲማቲም ፍርፍር",
+      "category": "Fasting & Vegan / Tsom",
+      "priceETB": 280,
+      "image": "/images/timatim-fitfit.jpg",
+      "spiceLevel": "Medium (2/3)",
+      "isFasting": true,
+      "isSpecial": false,
+      "description": "Fresh tomatoes, onions and injera mixed with lemon and Ethiopian spices.",
+      "ingredients": [
+        "Tomato",
+        "Injera",
+        "Onion",
+        "Lemon",
+        "Green Pepper"
+      ],
+      "servings": "Serves 1"
+    },
+    {
+      "id": "menu-18",
+      "slug": "house-tej-carafe",
+      "nameEn": "House Fermented Tej (500ml Carafe)",
+      "nameAm": "ጠጅ",
+      "category": "Beverages & Tej",
+      "priceETB": 350,
+      "image": "/images/tej.jpg",
+      "spiceLevel": "N/A",
+      "isFasting": true,
+      "isSpecial": true,
+      "description": "Traditional Ethiopian honey wine served chilled in a 500ml carafe.",
+      "ingredients": [
+        "Honey",
+        "Water",
+        "Gesho"
+      ],
+      "servings": "500ml Carafe",
+      "alcohol": "11% ABV"
+    },
+    {
+      "id": "menu-19",
+      "slug": "jebena-spiced-coffee",
+      "nameEn": "Traditional Jebena Coffee",
+      "nameAm": "ቡና",
+      "category": "Beverages & Tej",
+      "priceETB": 80,
+      "image": "/images/jebena-coffee.jpg",
+      "spiceLevel": "N/A",
+      "isFasting": true,
+      "isSpecial": false,
+      "description": "Freshly roasted Ethiopian coffee prepared traditionally in a jebena.",
+      "ingredients": [
+        "Ethiopian Coffee Beans",
+        "Water"
+      ],
+      "servings": "1 Jebena"
+    },
+    {
+      "id": "menu-20",
+      "slug": "spiced-habesha-chai",
+      "nameEn": "Highland Spiced Shai",
+      "nameAm": "ሻይ",
+      "category": "Beverages & Tej",
+      "priceETB": 80,
+      "image": "/images/habesha-chai.jpg",
+      "spiceLevel": "Mild (1/3)",
+      "isFasting": true,
+      "isSpecial": false,
+      "description": "Warm Ethiopian-style spiced tea with aromatic herbs and spices.",
+      "ingredients": [
+        "Black Tea",
+        "Cinnamon",
+        "Cardamom",
+        "Clove"
+      ],
+      "servings": "1 Cup"
+    }
+  ]
+}
