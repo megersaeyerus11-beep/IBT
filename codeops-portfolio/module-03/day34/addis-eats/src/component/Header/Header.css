@@ -1,0 +1,20 @@
+.heading-title {
+  padding: 24px;
+  background-color: #1b4332;
+  color: #ffffff;
+  text-align: center;
+}
+
+.main-heading {
+  position: sticky;
+  top: 0;
+}
+
+.cart-badge {
+  font-size: 0.9rem;
+  background-color: #000000;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-left: 12px;
+  vertical-align: middle;
+}

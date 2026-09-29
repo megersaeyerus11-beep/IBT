@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f5ef;
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+  color: #1b4332;
+}
+
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.header {
+  padding: 20px;
+  background: #1b4332;
+  color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header a {
+  color: white;
+}
+
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  );
+
+  gap: 20px;
+}
+
+.dish-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.dish-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.dish-card div {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.category-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.spicy {
+  color: #b00020;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+}
