@@ -6,29 +6,35 @@ return (
     <aside className="menu-sidebar">
         <h2>Categories</h2>
 
-        <nav aria-label="Menu categories">
         <ul>
-            <li>
-            <Link href="/menu">All Dishes</Link>
-            </li>
+        <li>
+            <Link href="/menu">All</Link>
+        </li>
 
-            <li>
-            <Link href="/menu?category=Main">Main</Link>
-            </li>
+        <li>
+            <Link href="/menu?category=Main">
+            Main
+            </Link>
+        </li>
 
-            <li>
+        <li>
             <Link href="/menu?category=Vegetarian">
-                Vegetarian
+            Vegetarian
             </Link>
-            </li>
+        </li>
 
-            <li>
+        <li>
             <Link href="/menu?category=Breakfast">
-                Breakfast
+            Breakfast
             </Link>
-            </li>
+        </li>
+
+        <li>
+            <Link href="/menu?category=Drinks">
+            Drinks
+            </Link>
+        </li>
         </ul>
-        </nav>
     </aside>
 
     <section className="menu-content">

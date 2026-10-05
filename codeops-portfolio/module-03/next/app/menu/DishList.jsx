@@ -1,21 +1,31 @@
-"use client";
-
 import Link from "next/link";
 
 export default function DishList({ dishes }) {
 return (
-    <div>
+    <div className="dish-list">
     {dishes.map((dish) => (
-        <article key={dish.id}>
-        <h2>{dish.name}</h2>
+        <article className="dish-card" key={dish.id}>
+        <img
+            src={dish.image}
+            alt={dish.name}
+        />
 
-        <p>Category: {dish.category}</p>
+        <div className="dish-card-content">
+            <h2>{dish.name}</h2>
 
-        <p>Price: {dish.price} ETB</p>
+            <p>Category: {dish.category}</p>
 
-        <Link href={`/menu/${dish.id}`}>
+            <p className="dish-price">
+            {dish.price} ETB
+            </p>
+
+            <Link
+            href={`/menu/${dish.id}`}
+            className="link-button"
+            >
             View Dish
-        </Link>
+            </Link>
+        </div>
         </article>
     ))}
     </div>

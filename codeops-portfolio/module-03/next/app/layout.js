@@ -1,23 +1,22 @@
-import "./globals.css";
+
 import Header from "./header";
 import Footer from "./footer";
-
-export const metadata = {
-  title: "Addis Eats",
-  description: "Order delicious Ethiopian food with Addis Eats.",
-};
+import Providers from "./Providers";
+import "./globals.css";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Header />
+        <Providers>
+          <Header />
 
-        <main className="site-main">
-          {children}
-        </main>
+          <main className="site-main">
+            {children}
+          </main>
 
-        <Footer />
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

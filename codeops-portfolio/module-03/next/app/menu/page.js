@@ -1,171 +1,10 @@
 import { Suspense } from "react";
 import CategoryBar from "./CategoryBar";
 import DishList from "./DishList";
+import FilterShell from "./FilterShell";
+import { menu } from "./data";
 
 export const revalidate = 60;
-
-const menu = [
-{
-    id: 1,
-    name: "Doro Wat",
-    category: "Main",
-    price: 240,
-    spicy: true,
-    image: "/images/doro-wat.jpg",
-},
-{
-    id: 2,
-    name: "Shiro",
-    category: "Vegetarian",
-    price: 120,
-    spicy: false,
-    image: "/images/shiro.jpg",
-},
-{
-    id: 3,
-    name: "Kitfo",
-    category: "Main",
-    price: 320,
-    spicy: true,
-    image: "/images/kitfo.jpg",
-},
-{
-    id: 4,
-    name: "Tibs",
-    category: "Main",
-    price: 280,
-    spicy: true,
-    image: "/images/tibs.jpg",
-},
-{
-    id: 5,
-    name: "Injera Firfir",
-    category: "Breakfast",
-    price: 100,
-    spicy: true,
-    image: "/images/injera-firfir.jpg",
-},
-{
-    id: 6,
-    name: "Beyaynetu",
-    category: "Vegetarian",
-    price: 150,
-    spicy: false,
-    image: "/images/beyaynetu.jpg",
-},
-{
-    id: 7,
-    name: "Misir Wat",
-    category: "Vegetarian",
-    price: 110,
-    spicy: true,
-    image: "/images/misir-wat.jpg",
-},
-{
-    id: 8,
-    name: "Gomen",
-    category: "Vegetarian",
-    price: 100,
-    spicy: false,
-    image: "/images/gomen.jpg",
-},
-{
-    id: 9,
-    name: "Atkilt Wat",
-    category: "Vegetarian",
-    price: 110,
-    spicy: false,
-    image: "/images/atkilt-wat.jpg",
-},
-{
-    id: 10,
-    name: "Dulet",
-    category: "Main",
-    price: 220,
-    spicy: true,
-    image: "/images/dulet.jpg",
-},
-{
-    id: 11,
-    name: "Chechebsa",
-    category: "Breakfast",
-    price: 130,
-    spicy: false,
-    image: "/images/chechebsa.jpg",
-},
-{
-    id: 12,
-    name: "Ful",
-    category: "Breakfast",
-    price: 100,
-    spicy: false,
-    image: "/images/ful.jpg",
-},
-{
-    id: 13,
-    name: "Genfo",
-    category: "Breakfast",
-    price: 90,
-    spicy: false,
-    image: "/images/genfo.jpg",
-},
-{
-    id: 14,
-    name: "Macchiato",
-    category: "Drinks",
-    price: 80,
-    spicy: false,
-    image: "/images/macchiato.jpg",
-},
-{
-    id: 15,
-    name: "Bunna",
-    category: "Drinks",
-    price: 50,
-    spicy: false,
-    image: "/images/bunna.jpg",
-},
-{
-    id: 16,
-    name: "Spris",
-    category: "Drinks",
-    price: 120,
-    spicy: false,
-    image: "/images/spris.jpg",
-},
-{
-    id: 17,
-    name: "Tella",
-    category: "Drinks",
-    price: 70,
-    spicy: false,
-    image: "/images/tella.jpg",
-},
-{
-    id: 18,
-    name: "Araki",
-    category: "Drinks",
-    price: 100,
-    spicy: false,
-    image: "/images/araki.jpg",
-},
-{
-    id: 19,
-    name: "Fasting Firfir",
-    category: "Vegetarian",
-    price: 120,
-    spicy: true,
-    image: "/images/fasting-firfir.jpg",
-},
-{
-    id: 20,
-    name: "Tibs Firfir",
-    category: "Main",
-    price: 250,
-    spicy: true,
-    image: "/images/tibs-firfir.jpg",
-},
-];
 
 const categories = [
 "All",
@@ -175,15 +14,13 @@ const categories = [
 "Drinks",
 ];
 
-function DishListFallback() {
-return (
-    <div>
-    <p>Loading dishes...</p>
-    </div>
-);
+async function getDishes() {
+return menu;
 }
 
-export default function MenuPage() {
+export default async function MenuPage() {
+const dishes = await getDishes();
+
 return (
     <main>
     <h1>Addis Eats Menu</h1>
@@ -191,12 +28,13 @@ return (
     <CategoryBar
         categories={categories}
         selected="All"
-        onSelect={() => {}}
     />
 
-    <Suspense fallback={<DishListFallback />}>
-        <DishList dishes={menu} />
-    </Suspense>
+    <FilterShell>
+        <Suspense fallback={<p>Loading dishes...</p>}>
+        <DishList dishes={dishes} />
+        </Suspense>
+    </FilterShell>
     </main>
 );
 }
