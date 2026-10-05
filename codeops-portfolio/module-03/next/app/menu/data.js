@@ -1,10 +1,4 @@
-import { Suspense } from "react";
-import CategoryBar from "./CategoryBar";
-import DishList from "./DishList";
-
-export const revalidate = 60;
-
-const menu = [
+export const menu = [
 {
     id: 1,
     name: "Doro Wat",
@@ -167,36 +161,3 @@ const menu = [
 },
 ];
 
-const categories = [
-"All",
-"Main",
-"Vegetarian",
-"Breakfast",
-"Drinks",
-];
-
-function DishListFallback() {
-return (
-    <div>
-    <p>Loading dishes...</p>
-    </div>
-);
-}
-
-export default function MenuPage() {
-return (
-    <main>
-    <h1>Addis Eats Menu</h1>
-
-    <CategoryBar
-        categories={categories}
-        selected="All"
-        onSelect={() => {}}
-    />
-
-    <Suspense fallback={<DishListFallback />}>
-        <DishList dishes={menu} />
-    </Suspense>
-    </main>
-);
-}

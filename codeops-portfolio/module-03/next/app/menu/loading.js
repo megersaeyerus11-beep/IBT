@@ -1,9 +1,9 @@
 import React from 'react'
 
 export default function Loading() {
-  return (
+return (
     <div>
         Loading...
     </div>
-  )
+)
 }

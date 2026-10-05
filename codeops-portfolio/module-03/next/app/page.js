@@ -1,14 +1,15 @@
-import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+export default function HomePage() {
   return (
-   <div>
-    <p>Home</p>
-    <Link href={"/menu"}>menu</Link><br></br>
-    <Link href={"/cart"}>cart</Link><br></br>
-    <Link href={"/Checkout"}>Checkout</Link>
+    <section>
+      <h1>Welcome to Addis Eats</h1>
 
-   </div>
+      <p>Order delicious Ethiopian food from Addis Eats.</p>
+
+      <Link href="/menu">
+        View Menu
+      </Link>
+    </section>
   );
 }
