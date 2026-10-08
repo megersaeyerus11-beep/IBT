@@ -1,40 +1,16 @@
-import { Suspense } from "react";
-import CategoryBar from "./CategoryBar";
-import DishList from "./DishList";
-import FilterShell from "./FilterShell";
-import { menu } from "./data";
-
-export const revalidate = 60;
-
-const categories = [
-"All",
-"Main",
-"Vegetarian",
-"Breakfast",
-"Drinks",
-];
-
-async function getDishes() {
-return menu;
-}
+import { menu } from "@/app/data/menu";
 
 export default async function MenuPage() {
-const dishes = await getDishes();
-
 return (
     <main>
-    <h1>Addis Eats Menu</h1>
+    <h1>Our Menu</h1>
 
-    <CategoryBar
-        categories={categories}
-        selected="All"
-    />
-
-    <FilterShell>
-        <Suspense fallback={<p>Loading dishes...</p>}>
-        <DishList dishes={dishes} />
-        </Suspense>
-    </FilterShell>
+    {menu.map((dish) => (
+        <div key={dish.id}>
+        <h2>{dish.name}</h2>
+        <p>{dish.price} ETB</p>
+        </div>
+    ))}
     </main>
 );
 }
