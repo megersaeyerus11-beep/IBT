@@ -1,22 +1,30 @@
-
-import Header from "./header";
-import Footer from "./footer";
-import Providers from "./Providers";
 import "./globals.css";
+
+export const metadata = {
+  title: "Addis Eats",
+  description: "Food ordering application",
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Providers>
-          <Header />
+        <header>
+          <h1>Addis Eats</h1>
 
-          <main className="site-main">
-            {children}
-          </main>
+          <nav>
+            <a href="/">Home</a>{" "}
+            <a href="/menu">Menu</a>{" "}
+            <a href="/cart">Cart</a>{" "}
+            <a href="/checkout">Checkout</a>
+          </nav>
+        </header>
 
-          <Footer />
-        </Providers>
+        <main>{children}</main>
+
+        <footer>
+          <p>Addis Eats · Bole, Addis Ababa · TeleBirr</p>
+        </footer>
       </body>
     </html>
   );

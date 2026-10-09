@@ -1,32 +1,29 @@
+import { orderSchema } from "../../src/lib/schema";
+import { createOrder } from "../../src/lib/db";
+
 export async function POST(request) {
   try {
     const body = await request.json();
 
-    const { name, phone, area, notes } = body;
+    const result = orderSchema.safeParse({
+      ...body,
+      quantity:
+        body.quantity !== undefined
+          ? Number(body.quantity)
+          : 1,
+    });
 
-    const fieldErrors = {};
+    if (!result.success) {
+      const fieldErrors = {};
 
-    // Name
-    if (!name || name.trim() === "") {
-      fieldErrors.name = "Name is required.";
-    }
+      for (const issue of result.error.issues) {
+        const field = issue.path[0];
 
-    // Phone
-    const phoneRegex = /^(?:\+251|0)9\d{8}$/;
+        if (field) {
+          fieldErrors[field] = issue.message;
+        }
+      }
 
-    if (!phone || !phoneRegex.test(phone)) {
-      fieldErrors.phone = "Enter a valid TeleBirr phone number.";
-    }
-
-    // Area
-    const validAreas = ["Bole", "Kazanchis", "Megenagna"];
-
-    if (!area || !validAreas.includes(area)) {
-      fieldErrors.area = "Select a valid delivery area.";
-    }
-
-    // Validation failed
-    if (Object.keys(fieldErrors).length > 0) {
       return Response.json(
         {
           error: "Validation failed",
@@ -36,22 +33,19 @@ export async function POST(request) {
       );
     }
 
-    // Valid order
-    const order = {
-      id: Date.now(),
-      name: name.trim(),
-      phone,
-      area,
-      notes: notes?.trim() || "",
-      createdAt: new Date().toISOString(),
-    };
+    const order = await createOrder(result.data);
 
-    return Response.json(order, { status: 201 });
-
+    return Response.json(
+      {
+        status: "ok",
+        data: order,
+      },
+      { status: 201 }
+    );
   } catch (error) {
     return Response.json(
       {
-        error: "Invalid JSON body",
+        error: "Invalid request",
       },
       { status: 400 }
     );

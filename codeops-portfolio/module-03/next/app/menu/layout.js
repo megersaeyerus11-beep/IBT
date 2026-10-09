@@ -1,45 +1,18 @@
-import Link from "next/link";
-
 export default function MenuLayout({ children }) {
-return (
-    <div className="menu-layout">
-    <aside className="menu-sidebar">
-        <h2>Categories</h2>
+  return (
+    <section>
+      <aside>
+        <h3>Menu Categories</h3>
 
         <ul>
-        <li>
-            <Link href="/menu">All</Link>
-        </li>
-
-        <li>
-            <Link href="/menu?category=Main">
-            Main
-            </Link>
-        </li>
-
-        <li>
-            <Link href="/menu?category=Vegetarian">
-            Vegetarian
-            </Link>
-        </li>
-
-        <li>
-            <Link href="/menu?category=Breakfast">
-            Breakfast
-            </Link>
-        </li>
-
-        <li>
-            <Link href="/menu?category=Drinks">
-            Drinks
-            </Link>
-        </li>
+          <li>Traditional Stews & Wat</li>
+          <li>Vegetarian</li>
+          <li>Main Dishes</li>
+          <li>Breakfast</li>
         </ul>
-    </aside>
+      </aside>
 
-    <section className="menu-content">
-        {children}
+      <div>{children}</div>
     </section>
-    </div>
-);
+  );
 }

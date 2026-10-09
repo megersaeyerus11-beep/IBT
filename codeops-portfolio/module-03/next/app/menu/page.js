@@ -1,16 +1,17 @@
-import { menu } from "@/app/data/menu";
+import DishList from "../components/DishList";
+import { db } from "../src/lib/db";
+
+export const revalidate = 3600;
 
 export default async function MenuPage() {
-return (
-    <main>
-    <h1>Our Menu</h1>
+  const dishes = await db.dish.findMany();
 
-    {menu.map((dish) => (
-        <div key={dish.id}>
-        <h2>{dish.name}</h2>
-        <p>{dish.price} ETB</p>
-        </div>
-    ))}
-    </main>
-);
+  return (
+    <section>
+      <h2>Our Menu</h2>
+
+
+      <DishList dishes={dishes} />
+    </section>
+  );
 }

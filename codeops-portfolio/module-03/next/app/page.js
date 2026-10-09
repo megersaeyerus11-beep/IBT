@@ -1,15 +1,17 @@
-import Link from "next/link";
-
 export default function HomePage() {
   return (
     <section>
-      <h1>Welcome to Addis Eats</h1>
+      <h2>Welcome to Addis Eats</h2>
 
-      <p>Order delicious Ethiopian food from Addis Eats.</p>
+      <p>Order your favorite Ethiopian food.</p>
 
-      <Link href="/menu">
-        View Menu
-      </Link>
+      <h3>Today's Specials</h3>
+
+      <ul>
+        <li>Doro Wat</li>
+        <li>Kitfo</li>
+        <li>Tibs</li>
+      </ul>
     </section>
   );
 }
