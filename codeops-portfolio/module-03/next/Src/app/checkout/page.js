@@ -1,4 +1,5 @@
 import CheckoutForm from "../components/CheckoutForm";
+import "./checkout.css";
 
 export const dynamic = "force-dynamic";
 
